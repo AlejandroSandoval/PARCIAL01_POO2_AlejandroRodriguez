@@ -42,7 +42,7 @@ public class AlumnosCtrl {
         return resp;
     }
     
-    public Alumnos get(Long empId)
+    public Alumnos get(Integer empId)
     {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("POOPU");
         EntityManager em = emf.createEntityManager();
@@ -76,6 +76,5 @@ public class AlumnosCtrl {
         em.close();
         emf.close();
         return resp;
-       
     }
 }

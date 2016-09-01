@@ -36,17 +36,15 @@
         <header>
             <nav>
                 <div class="nav-wrapper light-blue darken-4">
-                    <a href="#!" class="brand-logo">Guia con JPA</a>
+                    <a href="#!" class="brand-logo">Parcial</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                      <li><a href="index.jsp">Lugar Acceso</a></li>
-                      <li><a href="tipodocu.jsp">Tipo Docu</a></li>
-                      <li><a href="tipogafe.jsp">Tipo Gafete</a></li>
+                      <li><a href="index.jsp">Alumnos por Grupo</a></li>
+                      <li><a href="tipodocu.jsp">Alumnos</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                      <li><a href="index.jsp">Lugar Acceso</a></li>
-                      <li><a href="tipodocu.jsp">Tipo Docu</a></li>
-                      <li><a href="tipogafe.jsp">Tipo Gafete</a></li>
+                       <li><a href="index.jsp">Alumnos por Grupo</a></li>
+                      <li><a href="tipodocu.jsp">Alumnos</a></li>
                     </ul>
                 </div>
             </nav>

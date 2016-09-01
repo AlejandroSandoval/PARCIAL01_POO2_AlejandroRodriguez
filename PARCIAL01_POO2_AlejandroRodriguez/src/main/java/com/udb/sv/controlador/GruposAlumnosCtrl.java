@@ -61,4 +61,28 @@ public class GruposAlumnosCtrl {
         return resp;
        
     }
+    
+    public List<GruposAlumnos> ConsoTodo(Object Codi)
+    {
+        if(Codi == null){
+            Codi = 1;
+        }
+        List<GruposAlumnos> resp = new ArrayList<>();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("POOPU");
+        EntityManager em = emf.createEntityManager();
+        try
+        {
+            TypedQuery<GruposAlumnos> query =em.createNamedQuery("GruposAlumnos.findByCodiGrup", GruposAlumnos.class);
+            query.setParameter("codiGrup",Codi);
+           resp = query.getResultList();
+        }
+        catch(Exception ex)
+        {
+            
+        }
+        em.close();
+        emf.close();
+        return resp;
+       
+    }
 }

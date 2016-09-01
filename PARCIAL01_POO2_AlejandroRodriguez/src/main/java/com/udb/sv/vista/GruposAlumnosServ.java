@@ -47,11 +47,16 @@ public class GruposAlumnosServ extends HttpServlet {
                 GruposAlumnos obje = new GruposAlumnos();
                 char c = 1;
                 obje.setEstaGrupAlum(c);
-                Alumnos alumn = new AlumnosCtrl().get(Long.parseLong(request.getParameter("cmbalumno")));
+                Alumnos alumn = new AlumnosCtrl().get(Integer.parseInt((request.getParameter("cmbalumno"))));
                 obje.setCodiAlum(alumn);
-                Grupos grup = new GruposCtrl().get(Long.parseLong(request.getParameter("cmbgrupo")));
+                Grupos grup = new GruposCtrl().get(Integer.parseInt((request.getParameter("cmbgrupo"))));
                 obje.setCodiGrup(grup);
                 mens = new GruposAlumnosCtrl().guar(obje) ? "Datos guardados exitosamente" : "Datos NO guardados";
+            }
+            else if(CRUD.equals("Consultar"))
+            {
+                int codiGrup = Integer.parseInt(request.getParameter("grupo"));
+                    request.setAttribute("Grupo", codiGrup);
             }
             request.setAttribute("mensAler", mens);
             request.getRequestDispatcher("/index.jsp").forward(request, response);
